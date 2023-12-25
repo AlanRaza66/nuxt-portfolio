@@ -4,13 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        "primary": "#00ABE7",
-        "secondary": "#2DC7FF",
+        primary: "#1D3354",
+        secondary: "#92DCE5",
+        third: "#467599",
+        light: "#F8F7F9",
       },
       screens: {
         sm: { max: "768px" },
-        md: { max: "992px" }
-      }
+        md: { max: "992px" },
+      },
     },
   },
   plugins: [],
