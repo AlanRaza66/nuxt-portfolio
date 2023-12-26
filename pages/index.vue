@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import gsap from "gsap";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+</script>
 <template>
   <main class="w-full min-h-screen">
     <div
@@ -5,11 +12,20 @@
     >
       <HeroHome />
     </div>
-    <div class="h-screen w-full bg-primary pb-[1rem] px-[1rem] md:px-[0.75rem] md:pb-[0.75rem] md:min-h-screen md:h-auto relative">
+    <div
+      class="h-screen w-full bg-primary pb-[1rem] px-[1rem] md:px-[0.75rem] md:pb-[0.75rem] md:min-h-screen md:h-auto relative"
+    >
       <StudyHome />
     </div>
-    <div class="h-screen w-full bg-primary pb-[1rem] px-[1rem] md:px-[0.75rem] md:pb-[0.75rem] md:min-h-screen md:h-auto relative">
+    <div
+      class="h-screen w-full bg-primary pb-[1rem] px-[1rem] md:px-[0.75rem] md:pb-[0.75rem] md:min-h-screen md:h-auto relative"
+    >
       <DevStackHome />
+    </div>
+    <div
+      class="h-[50vh] w-full bg-primary pb-[1rem] px-[1rem] md:px-[0.75rem] md:pb-[0.75rem] md:min-h-screen md:h-auto relative"
+    >
+      <FooterHome />
     </div>
   </main>
 </template>
