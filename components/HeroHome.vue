@@ -14,14 +14,14 @@
         </h2>
         <!-- Todo Add animation on text (developper => designer) -->
         <h1 class="mb-2 text-6xl font-bold md:text-3xl">Web Developper</h1>
-        <p class="text-xl text-justify md:hidden">
+        <p class="text-xl font-thin text-justify md:hidden">
           Welcome to my portfolio! Passionate about technology, design, and
           photography, this space showcases my work at the intersection of
           innovation and creativity. Dive in and explore my unique perspective,
           and feel free to connect for collaborations or inquiries. Thank you
           for visiting!
         </p>
-        <p class="hidden text-justify md:inline md:text-base">
+        <p class="hidden font-thin text-justify md:inline md:text-base">
           Welcome to my portfolio! Passionate about technology, design, and
           photography, this space showcases my work at the intersection of
           innovation and creativity.
@@ -43,7 +43,7 @@
           class="flex items-start justify-end flex-col w-full h-full p-8 bg-gradient-to-b from-transparent to-[rgba(0,0,0,0.75)] md:p-3"
         >
           <h6 class="text-lg font-bold">Get to know me!</h6>
-          <p class="text-base font-thin md:hidden">Who i am?</p>
+          <p class="text-base font-light md:hidden">Who i am?</p>
         </div></NuxtLink
       >
     </div>
@@ -62,7 +62,7 @@
           class="flex items-start justify-end flex-col w-full h-full p-8 bg-gradient-to-b from-transparent to-[rgba(0,0,0,0.75)] md:p-3"
         >
           <h6 class="text-lg font-bold">Discover my past projects.</h6>
-          <p class="text-base font-thin md:hidden">Some IT projects</p>
+          <p class="text-base font-light md:hidden">Some IT projects</p>
         </div></NuxtLink
       >
     </div>
@@ -80,7 +80,7 @@
           class="flex items-start justify-end flex-col w-full h-full p-8 bg-gradient-to-b from-transparent to-[rgba(0,0,0,0.75)] md:p-3"
         >
           <h6 class="text-lg font-bold">Discover my photos</h6>
-          <p class="text-base font-thin md:hidden">Some of my artwoks</p>
+          <p class="text-base font-light md:hidden">Some of my artwoks</p>
         </div></NuxtLink
       >
     </div>

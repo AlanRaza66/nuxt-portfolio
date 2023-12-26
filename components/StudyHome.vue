@@ -19,20 +19,20 @@
           <h6 class="text-lg font-bold">
             Conservatoire Nationale des Arts et Métiers (CNAM)
           </h6>
-          <p class="text-base font-thin md:hidden">
+          <p class="text-base font-light md:hidden">
             Where I pursued my academic journey.
           </p>
         </div></NuxtLink
       >
     </div>
     <div
-      class="col-span-3 row-span-3 p-8 rounded bg-third md:col-span-5 md:row-span-2 md:aspect-video md:p-3"
+      class="col-span-3 row-span-3 p-8 rounded bg-third md:col-span-5 md:row-span-2 md:aspect-auto md:p-3"
     >
       <div
         class="flex flex-col items-start justify-center w-full h-full md:justify-start"
       >
-        <h2 class="mb-2 text-6xl font-bold md:text-3xl">Project Manager</h2>
-        <p class="text-xl text-justify md:text-base">
+        <h2 class="mb-2 text-4xl font-bold md:text-2xl">Project Manager</h2>
+        <p class="text-xl font-thin text-justify md:text-base">
           I pursued a degree in Information Systems Engineering / Business
           Intelligence with a focus on Project Management at CNAM Madagascar -
           La Réunion and Paris
@@ -40,15 +40,15 @@
       </div>
     </div>
     <div
-      class="col-span-3 row-span-2 p-8 rounded bg-third md:col-span-5 md:row-span-2 md:aspect-video md:p-3"
+      class="col-span-3 row-span-2 p-8 rounded bg-third md:col-span-5 md:row-span-2 md:aspect-auto md:p-3"
     >
       <div
         class="flex flex-col items-start justify-center w-full h-full md:justify-start"
       >
-        <h2 class="mb-2 text-6xl font-bold md:text-3xl">
+        <h2 class="mb-2 text-4xl font-bold md:text-2xl">
           Designer and Photographer
         </h2>
-        <p class="text-xl text-justify md:text-base">
+        <p class="text-xl font-thin text-justify md:text-base">
           I taught myself photography and design (newbie) through online
           platforms and books. And I am continually refining my skills.
         </p>
