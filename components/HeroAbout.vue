@@ -88,7 +88,7 @@
           class="flex items-start justify-end flex-col w-full h-full p-8 bg-gradient-to-b md:to-transparent from-transparent to-[rgba(0,0,0,0.75)] md:p-3"
         >
           <h6 class="text-lg font-bold">In case you ask my MBTI</h6>
-          <p class="text-base font-light">I'm Mediator (INFP)</p>
+          <p class="text-base font-light">I'm a Mediator (INFP)</p>
         </div>
       </div>
     </div>

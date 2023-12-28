@@ -39,7 +39,7 @@ onUnmounted(() => {
     ref="main"
   >
     <div
-      class="relative col-span-2 row-span-3 p-8 overflow-hidden rounded component bg-third md:col-span-5 md:row-span-2 md:aspect-video md:p-3 overlay-activator"
+      class="relative col-span-2 row-span-3 p-8 overflow-hidden rounded component bg-third md:col-span-5 md:row-span-2 md:aspect-auto md:p-3 overlay-activator"
     >
       <img
         src="../assets/images/cnam.jpg"
@@ -67,7 +67,9 @@ onUnmounted(() => {
       <div
         class="flex flex-col items-start justify-center w-full h-full md:justify-start"
       >
-        <h2 class="mb-2 text-4xl font-bold md:text-2xl">Project Manager</h2>
+        <h2 class="mb-2 text-4xl font-bold md:text-2xl md:text-center">
+          Project Manager
+        </h2>
         <p class="text-xl font-thin text-justify md:text-base">
           I pursued a degree in Information Systems Engineering / Business
           Intelligence with a focus on Project Management at CNAM Madagascar -
@@ -81,7 +83,7 @@ onUnmounted(() => {
       <div
         class="flex flex-col items-start justify-center w-full h-full md:justify-start"
       >
-        <h2 class="mb-2 text-4xl font-bold md:text-2xl">
+        <h2 class="mb-2 text-4xl font-bold md:text-2xl md:text-center">
           Designer and Photographer
         </h2>
         <p class="text-xl font-thin text-justify md:text-base">

@@ -44,7 +44,7 @@ onUnmounted(() => {
     >
       <div class="flex flex-wrap items-center justify-around w-full h-full">
         <div class="flex items-center justify-center w-full py-2">
-          <h6 class="text-4xl font-bold md:text-2xl">Technologies</h6>
+          <h6 class="text-4xl font-bold md:text-2xl md:text-center">Technologies</h6>
         </div>
         <div
           v-for="lang in languages"
@@ -67,7 +67,7 @@ onUnmounted(() => {
     >
       <div class="flex flex-wrap items-center justify-around w-full h-full">
         <div class="flex items-center justify-center w-full py-2">
-          <h6 class="text-4xl font-bold md:text-2xl">Libraries</h6>
+          <h6 class="text-4xl font-bold md:text-2xl md:text-center">Libraries</h6>
         </div>
         <div
           v-for="lang in librairies"
@@ -90,7 +90,7 @@ onUnmounted(() => {
     >
       <div class="flex flex-wrap items-center justify-around w-full h-full">
         <div class="flex items-center justify-center w-full py-2">
-          <h6 class="text-4xl font-bold md:text-2xl">Databases and tools</h6>
+          <h6 class="text-4xl font-bold md:text-2xl md:text-center">Databases and tools</h6>
         </div>
         <div
           v-for="lang in others"
@@ -114,7 +114,7 @@ onUnmounted(() => {
       <div
         class="flex flex-col items-start justify-center w-full h-full md:justify-start"
       >
-        <h2 class="mb-2 text-4xl font-bold md:text-2xl">
+        <h2 class="mb-2 text-4xl font-bold md:text-2xl md:text-center">
           Fullstack Developper Junior
         </h2>
         <p class="text-xl font-thin text-justify md:text-base">
@@ -128,9 +128,9 @@ onUnmounted(() => {
     <div
       class="relative col-span-2 row-span-3 p-8 rounded component bg-third md:col-span-6 md:row-span-2 md:aspect-auto md:p-3"
     >
-      <div class="flex flex-wrap items-center justify-around w-full h-full">
+      <div class="flex flex-wrap items-center justify-around w-full h-auto">
         <div class="flex items-center justify-center w-full py-2">
-          <h6 class="text-4xl font-bold md:text-2xl">Design Tools</h6>
+          <h6 class="text-4xl font-bold md:text-2xl md:text-center">Design Tools</h6>
         </div>
         <div
           v-for="lang in designs"
