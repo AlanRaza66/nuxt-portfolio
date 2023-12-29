@@ -20,6 +20,10 @@ const links = [
     label: "About",
     link: "/about",
   },
+  {
+    label: "Photos",
+    link: "/photos",
+  },
 ];
 </script>
 <template>
