@@ -3,7 +3,7 @@
     class="grid w-full h-full grid-cols-5 grid-rows-5 gap-4 text-light md:grid-rows-6 md:gap-3"
   >
     <div
-      class="relative col-span-3 row-span-3 p-8 rounded bg-third md:col-span-5 md:row-span-2 md:aspect-video md:p-3"
+      class="relative col-span-3 row-span-3 p-8 rounded bg-third md:col-span-5 md:row-span-2 md:aspect-auto md:p-3"
     >
       <div
         class="flex flex-col items-start justify-center w-full h-full md:justify-start"
@@ -29,7 +29,7 @@
       </div>
     </div>
     <div
-      class="relative col-span-2 row-span-5 overflow-hidden rounded cursor-pointer overlay-activator bg-third md:col-span-5 md:row-span-2 md:row-start-1 md:aspect-video"
+      class="relative col-span-2 row-span-5 overflow-hidden rounded cursor-pointer overlay-activator bg-third md:col-span-5 md:row-span-2 md:row-start-1 md:aspect-auto"
     >
       <img
         src="../assets/images/portrait.jpg"
@@ -37,7 +37,7 @@
       />
       <NuxtLink
         class="absolute top-0 left-0 block w-full h-full duration-500 translate-y-[100%] md:translate-y-[0] overlay"
-        to="/"
+        to="/about"
       >
         <div
           class="flex items-start justify-end flex-col w-full h-full p-8 bg-gradient-to-b from-transparent to-[rgba(0,0,0,0.75)] md:p-3"
@@ -61,7 +61,7 @@
         <div
           class="flex items-start justify-end flex-col w-full h-full p-8 bg-gradient-to-b from-transparent to-[rgba(0,0,0,0.75)] md:p-3"
         >
-          <h6 class="text-lg font-bold">Discover my past projects.</h6>
+          <h6 class="text-lg font-bold">Discover my past projects</h6>
           <p class="text-base font-light md:hidden">Some IT projects</p>
         </div></NuxtLink
       >

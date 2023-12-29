@@ -10,6 +10,17 @@ if (process.client) {
     }
   });
 }
+
+const links = [
+  {
+    label: "Home",
+    link: "/",
+  },
+  {
+    label: "About",
+    link: "/about",
+  },
+];
 </script>
 <template>
   <div>
@@ -25,11 +36,11 @@ if (process.client) {
         >Alan Raza</NuxtLink
       >
       <ul class="flex items-center justify-center md:hidden">
-        <li class="pl-[24px] text-lg" v-for="y in 4" :key="y">
+        <li class="pl-[24px] text-lg" v-for="(item, y) in links" :key="y">
           <NuxtLink
-            to="/"
+            :to="item.link"
             class="relative overflow-hidden text-white duration-500 menu-items"
-            >item.link</NuxtLink
+            >{{ item.label }}</NuxtLink
           >
         </li>
       </ul>
@@ -47,7 +58,7 @@ if (process.client) {
       </div>
     </header>
     <div
-      class="fixed z-10 duration-500 hidden md:flex flex-col items-end justify-between w-screen h-screen bg-opacity-50 bg-secondary backdrop-blur-sm px-[24px] py-[16px]"
+      class="fixed z-10 duration-500 hidden md:flex flex-col items-end justify-start w-screen h-screen bg-opacity-50 bg-primary backdrop-blur-sm px-[24px] py-[16px]"
       :class="menuActive ? 'translate-x-0' : 'translate-x-[100%]'"
     >
       <img
@@ -57,6 +68,20 @@ if (process.client) {
         class="z-20 duration-500 cursor-pointer"
         @click="menuActive = false"
       />
+      <ul class="flex flex-col items-end justify-end w-full mt-[24px]">
+        <li
+          class="pl-[24px] py-[8px] text-6xl"
+          v-for="(item, y) in links"
+          :key="y"
+        >
+          <NuxtLink
+            :to="item.link"
+            class="relative overflow-hidden text-white duration-500"
+            @click="menuActive = false"
+            >{{ item.label }}</NuxtLink
+          >
+        </li>
+      </ul>
     </div>
     <slot />
   </div>
@@ -75,6 +100,10 @@ if (process.client) {
 }
 
 .menu-items:hover::before {
+  width: 100%;
+}
+
+.menu-items.router-link-exact-active::before {
   width: 100%;
 }
 </style>
