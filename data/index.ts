@@ -1,4 +1,5 @@
 import nodejs from "../assets/images/techs/nodejs.png";
+import bootstrap from "../assets/images/techs/bootstrap.png"
 import php from "../assets/images/techs/php.png";
 import ts from "../assets/images/techs/ts.png";
 import python from "../assets/images/techs/python.png";
@@ -19,6 +20,7 @@ import xd from "../assets/images/techs/xd.png";
 import postman from "../assets/images/techs/postman.png";
 import npm from "../assets/images/techs/npm.png";
 import tailwind from "../assets/images/techs/tailwind.png";
+import prisma from "../assets/images/techs/prisma.png"
 const languages = [
   {
     name: "node",
@@ -39,6 +41,10 @@ const languages = [
 ];
 
 const librairies = [
+  {
+    name: "bootstrap",
+    logo: bootstrap,
+  },
   {
     name: "express",
     logo: express,
@@ -85,6 +91,10 @@ const others = [
   {
     name: "postman",
     logo: postman,
+  },
+  {
+    name: "prisma",
+    logo: prisma,
   },
   {
     name: "sqlite",
