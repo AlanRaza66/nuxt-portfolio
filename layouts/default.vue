@@ -21,6 +21,10 @@ const links = [
     link: "/about",
   },
   {
+    label: "Projects",
+    link: "/projects",
+  },
+  {
     label: "Photos",
     link: "/photos",
   },
