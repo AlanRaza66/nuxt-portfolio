@@ -1,15 +1,50 @@
 <script setup lang="ts">
 const runtimeConfig = useRuntimeConfig();
-const url: string = `https://graph.instagram.com/me/media?fields=id,username,media_url,timestamp,media_type,permalink&access_token=${runtimeConfig.instagramToken}`;
+const url: string = `https://graph.instagram.com/me/media?fields=id,username,caption,media_url,timestamp,media_type,permalink&limit=50&access_token=IGQWRNTVRLWk44ZAkgyYnNvSTFfaEI3SEZAybHdWRjdwSndKVkFPOE1TaXpkZAHViYzhFWnIyWWVWeG1SbTVQVEk3cEFpOGUyN0dydVQwRVNrWFFCRldGX0VpV1JXVUJEUjh4clcyY2duOFQtcXl1Ri1hQVNidTBxUWcZD`;
 
-const { data: feed } = await useAsyncData<any>("feed", () => $fetch(url));
+const { data } = await useAsyncData<any>("feed", () => $fetch(url));
+
+const feed: Ref = ref({});
+
+watch(
+  data,
+  (newValue) => {
+    if (newValue !== null) {
+      feed.value = newValue;
+    }
+  },
+  {
+    immediate: true,
+  }
+);
 </script>
 <template>
   <div
     class="flex flex-wrap items-start justify-center w-full h-full gap-4 text-light md:gap-3"
+    v-if="feed !== null"
   >
-    <div v-for="image in feed.data" class="aspect-square w-[calc(100%/3-1rem)]">
-        <img :src="image.media_url" alt="" class="object-cover w-full h-full">
+    <div
+      v-for="(image, y) in feed?.data"
+      class="relative aspect-square w-[calc(100%/3-1rem)] overlay-activator overflow-hidden cursor-pointer"
+      :class="image.media_type !== 'IMAGE' ? 'hidden':''"
+      :key="y"
+    >
+      <div
+        class="absolute top-0 left-0 block w-full h-full duration-500 translate-y-[100%] md:translate-y-[0] overlay md:hidden"
+      >
+        <div
+          class="flex items-start justify-end flex-col w-full h-full p-8 bg-gradient-to-b md:to-transparent from-transparent to-[rgba(0,0,0,0.75)] md:p-3"
+        >
+          <p class="text-base font-light">{{ image.caption }}</p>
+        </div>
+      </div>
+      <img :src="image.media_url" alt="" class="object-cover w-full h-full" />
     </div>
   </div>
 </template>
+
+<style scoped>
+.overlay-activator:hover .overlay {
+  transform: translateY(0);
+}
+</style>
