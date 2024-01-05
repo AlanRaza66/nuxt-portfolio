@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const runtimeConfig = useRuntimeConfig();
-const url: string = `https://graph.instagram.com/me/media?fields=id,username,caption,media_url,timestamp,media_type,permalink&limit=50&access_token=IGQWRNTVRLWk44ZAkgyYnNvSTFfaEI3SEZAybHdWRjdwSndKVkFPOE1TaXpkZAHViYzhFWnIyWWVWeG1SbTVQVEk3cEFpOGUyN0dydVQwRVNrWFFCRldGX0VpV1JXVUJEUjh4clcyY2duOFQtcXl1Ri1hQVNidTBxUWcZD`;
+const url: string = `https://graph.instagram.com/me/media?fields=id,username,caption,media_url,timestamp,media_type,permalink&limit=50&access_token=IGQWROT1lHV3YxNFVGYjVKeFNNcy14UG9RdkRlWkJua0dpaXFNU0dGNUREX3ZAkQ0FuUFkwYVdoUUdEWDhGZAGdKS3RDa3JlYTRtYWk2Ry10RTAtTEJMVnYydHh5S2lyOTNORW10cDlxSDctcHFRMjBVSHozbUY2M2MZD`;
 
 const { data } = await useAsyncData<any>("feed", () => $fetch(url));
 
