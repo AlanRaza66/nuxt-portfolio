@@ -8,8 +8,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
   runtimeConfig: {
-    igIdApp: "",
-    idToken: "",
+    instagramToken: process.env.NUXT_INSTAGRAM_TOKEN || "",
   },
   build: {
     transpile: ["gsap"],
