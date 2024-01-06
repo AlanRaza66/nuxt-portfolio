@@ -1,7 +1,6 @@
 <script setup lang="ts">
-const url: string = `https://graph.instagram.com/me/media?fields=id,username,caption,media_url,timestamp,media_type,permalink&limit=50&access_token=${useRuntimeConfig().instagramToken}`;
 
-const { data } = await useAsyncData<any>("feed", () => $fetch(url));
+const { data } = await useFetch("/api/instagram/pictures");
 
 const feed: Ref = ref({});
 
