@@ -7,10 +7,10 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss"],
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
-  runtimeConfig: {
-    instagramToken: process.env.NUXT_INSTAGRAM_TOKEN || "",
-  },
   build: {
     transpile: ["gsap"],
+  },
+  runtimeConfig: {
+    instagramToken: "",
   },
 });

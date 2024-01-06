@@ -1,6 +1,5 @@
 <script setup lang="ts">
-const runtimeConfig = useRuntimeConfig();
-const url: string = `https://graph.instagram.com/me/media?fields=id,username,caption,media_url,timestamp,media_type,permalink&limit=50&access_token=${runtimeConfig.instagramToken}`;
+const url: string = `https://graph.instagram.com/me/media?fields=id,username,caption,media_url,timestamp,media_type,permalink&limit=50&access_token=${useRuntimeConfig().instagramToken}`;
 
 const { data } = await useAsyncData<any>("feed", () => $fetch(url));
 
