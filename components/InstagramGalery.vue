@@ -21,8 +21,10 @@ watch(
     class="flex flex-wrap items-start justify-center w-full h-full gap-4 text-light md:gap-2"
     v-if="feed !== null"
   >
-    <div
+    <NuxtLink
       v-for="(image, y) in feed?.data"
+      :to="image.permalink"
+      target="_blank"
       class="relative aspect-square w-[calc(100%/3-1rem)] overlay-activator overflow-hidden cursor-pointer sm:w-[calc(100%/2-0.50rem)]"
       :class="image.media_type !== 'IMAGE' ? 'hidden':''"
       :key="y"
@@ -37,7 +39,7 @@ watch(
         </div>
       </div>
       <img :src="image.media_url" alt="" class="object-cover w-full h-full" />
-    </div>
+    </NuxtLink>
   </div>
 </template>
 
