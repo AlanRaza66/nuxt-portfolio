@@ -3,7 +3,7 @@
 const { data } = await useFetch("/api/instagram/pictures");
 
 const feed: Ref = ref({});
-
+//TODO add error handler.
 watch(
   data,
   (newValue) => {
