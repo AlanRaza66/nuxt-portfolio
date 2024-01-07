@@ -36,7 +36,7 @@ onUnmounted(() => {
 </script>
 <template>
   <div
-    class="grid w-full h-full grid-cols-6 grid-rows-6 gap-4 overflow-x-hidden text-light md:grid-rows-8 md:gap-3"
+    class="grid w-full grid-cols-6 grid-rows-6 gap-4 overflow-x-hidden h-fit text-light md:grid-rows-8 md:gap-3"
     ref="main"
   >
     <div

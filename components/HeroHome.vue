@@ -6,7 +6,7 @@
       class="relative col-span-3 row-span-3 p-8 rounded bg-third md:col-span-5 md:row-span-2 md:aspect-auto md:p-3"
     >
       <div
-        class="flex flex-col items-start justify-center w-full h-full md:justify-start"
+        class="flex flex-col items-start justify-center w-full h-full"
       >
         <h2 class="text-3xl md:text-lg">
           Hi! I'm
