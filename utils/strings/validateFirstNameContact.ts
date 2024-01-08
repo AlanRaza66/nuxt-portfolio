@@ -1,5 +1,5 @@
 import { contactConfig } from "~/utils/configs/contactConfig";
-import { ValidationResult } from "~/utils/types";
+import { type ValidationResult } from "~/utils/types";
 
 const validateRequiredCondition = (
   firstName: unknown,
@@ -7,7 +7,6 @@ const validateRequiredCondition = (
 ) => {
   if (!firstName) {
     validationResult.message = "Le prénom est requis.";
-    validationResult.code = "E2_67";
     validationResult.isValid = false;
   }
 };
@@ -18,7 +17,6 @@ const validateFormatCondition = (
 ) => {
   if (typeof firstName !== "string") {
     validationResult.message = "Le prénom doit être une chaîne.";
-    validationResult.code = "E2_68";
     validationResult.isValid = false;
   }
 };
@@ -33,7 +31,6 @@ const validateLengthCondition = (
 
   if (trimmed.length > maxFirstNameLength) {
     validationResult.message = `Le prénom ne doit pas dépasser les ${maxFirstNameLength} caractères.`;
-    validationResult.code = "E2_69";
     validationResult.isValid = false;
   } else {
     validationResult.result = trimmed;
@@ -44,7 +41,6 @@ const validateFirstName = (firstName: unknown): ValidationResult<string> => {
   const validationResult: ValidationResult<string> = {
     isValid: true,
     result: firstName as string,
-    code: null,
     message: null,
   };
 

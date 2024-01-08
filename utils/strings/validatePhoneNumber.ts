@@ -1,5 +1,5 @@
 import { contactConfig } from "~/utils/configs/contactConfig";
-import { ValidationResult } from "~/utils/types";
+import { type ValidationResult } from "~/utils/types";
 
 const validateFormatCondition = (
   tel: unknown,
@@ -7,7 +7,6 @@ const validateFormatCondition = (
 ) => {
   if (typeof tel !== "string") {
     validationResult.message = "Le numero doit être une chaîne.";
-    validationResult.code = "E2_73";
     validationResult.isValid = false;
   }
 };
@@ -21,7 +20,6 @@ const validateIsPhoneNumber = (
   if (!regex.test(tel)) {
     validationResult.message =
       "La structure du numéro de téléphone n'est pas conforme";
-    validationResult.code = "E2_74";
     validationResult.isValid = false;
   }
 };
@@ -36,7 +34,6 @@ const validateLengthCondition = (
 
   if (trimmed.length > maxPhoneNumberLength) {
     validationResult.message = `Le numéro de téléphone ne doit pas dépasser les ${maxPhoneNumberLength} caractères.`;
-    validationResult.code = "E2_75";
     validationResult.isValid = false;
   } else {
     validationResult.result = trimmed;
@@ -47,7 +44,6 @@ const validatePhoneNumber = (tel: string): ValidationResult<string> => {
   const validationResult: ValidationResult<string> = {
     isValid: true,
     result: tel as string,
-    code: null,
     message: null,
   };
 

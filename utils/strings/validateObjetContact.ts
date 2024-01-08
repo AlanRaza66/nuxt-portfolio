@@ -1,5 +1,5 @@
 import { contactConfig } from "~/utils/configs/contactConfig";
-import { ValidationResult } from "~/utils/types";
+import { type ValidationResult } from "~/utils/types";
 
 const validateRequiredCondition = (
   objet: unknown,
@@ -7,7 +7,6 @@ const validateRequiredCondition = (
 ) => {
   if (!objet) {
     validationResult.message = "L'objet du message est requis.";
-    validationResult.code = "E2_76";
     validationResult.isValid = false;
   }
 };
@@ -18,7 +17,6 @@ const validateFormatCondition = (
 ) => {
   if (typeof objet !== "string") {
     validationResult.message = "L'objet doit être une chaîne.";
-    validationResult.code = "E2_77";
     validationResult.isValid = false;
   } else {
     validationResult.result = objet;
@@ -35,7 +33,6 @@ const validateLengthCondition = (
 
   if (trimmed.length > maxObjectLength) {
     validationResult.message = `L'objet du message ne doit pas dépasser les ${maxObjectLength} caractères.`;
-    validationResult.code = "E2_78";
     validationResult.isValid = false;
   } else {
     validationResult.result = trimmed;
@@ -46,7 +43,6 @@ const validateObject = (objet: unknown): ValidationResult<string> => {
   const validationResult: ValidationResult<string> = {
     isValid: true,
     result: objet as string,
-    code: null,
     message: null,
   };
 

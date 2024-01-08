@@ -12,5 +12,6 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     instagramToken: "",
+    email: ""
   },
 });

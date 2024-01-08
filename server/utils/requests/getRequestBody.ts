@@ -1,5 +1,5 @@
 import type { H3Event } from "h3";
-import { RequestBody } from "~/utils/types";
+import { type RequestBody } from "~/utils/types";
 
 const getRequestBody = async <T extends string[]>(
   e: H3Event,

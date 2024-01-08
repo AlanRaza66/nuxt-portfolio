@@ -9,7 +9,7 @@ import { validateMessage } from "~/utils/strings/validateMessage";
 import { validateName } from "~/utils/strings/validateNameContact";
 import { validateObject } from "~/utils/strings/validateObjetContact";
 import { validatePhoneNumber } from "~/utils/strings/validatePhoneNumber";
-import { ErrorMessage, RequestBody, ValidationResult } from "~/utils/types";
+import type { ErrorMessage, RequestBody, ValidationResult } from "~/utils/types";
 
 export default defineEventHandler(async (e) => {
   const { email } = useRuntimeConfig();

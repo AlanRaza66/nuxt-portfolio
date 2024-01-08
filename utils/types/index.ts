@@ -5,7 +5,6 @@ export type ErrorMessage = {
 export type ValidResult<T> = {
   isValid: true;
   result: T;
-  code: null;
   message: null;
 };
 
@@ -13,7 +12,6 @@ export type InvalidResult<T> = {
   isValid: false;
   // eslint-disable-next-line no-unused-vars
   result: { [P in keyof T]: null };
-  code: string;
   message: string;
 };
 
