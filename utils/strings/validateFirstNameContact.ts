@@ -30,7 +30,7 @@ const validateLengthCondition = (
   const maxFirstNameLength: number = contactConfig.MAX_FIRSTNAME_LENGTH;
 
   if (trimmed.length > maxFirstNameLength) {
-    validationResult.message = `Le prénom ne doit pas dépasser les ${maxFirstNameLength} caractères.`;
+    validationResult.message = `The first name must not exceed ${maxFirstNameLength} characters.`;
     validationResult.isValid = false;
   } else {
     validationResult.result = trimmed;

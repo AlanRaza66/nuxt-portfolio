@@ -5,7 +5,7 @@ const validateFormatCondition = (
   validationResult: ValidationResult<string>
 ) => {
   if (typeof message !== "string") {
-    validationResult.message = "Le message doit être une chaîne.";
+    validationResult.message = "The message must be a string.";
     validationResult.isValid = false;
   }
 };

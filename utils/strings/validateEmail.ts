@@ -27,7 +27,7 @@ const validateIsEmail = (
   // Expression régulière pour valider une adresse e-mail
   const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5}$/;
   if (!regex.test(email)) {
-    validationResult.message = "La structure de l'adresse n'est pas conforme";
+    validationResult.message = "The structure of the address is not in compliance.";
     validationResult.isValid = false;
   } else {
     validationResult.result = email;

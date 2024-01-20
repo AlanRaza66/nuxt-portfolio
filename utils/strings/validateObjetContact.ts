@@ -32,7 +32,7 @@ const validateLengthCondition = (
   const maxObjectLength: number = contactConfig.MAX_OBJECT_LENGTH;
 
   if (trimmed.length > maxObjectLength) {
-    validationResult.message = `L'objet du message ne doit pas dépasser les ${maxObjectLength} caractères.`;
+    validationResult.message = `The subject must not exceed ${maxObjectLength} characters.`;
     validationResult.isValid = false;
   } else {
     validationResult.result = trimmed;

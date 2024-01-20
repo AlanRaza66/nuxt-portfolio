@@ -60,7 +60,7 @@ onMounted(() => {
       <DevStackHome />
     </div>
     <div
-      class="h-[50vh] w-full bg-primary pb-[1rem] px-[1rem] md:px-[0.75rem] md:pb-[0.75rem] md:h-auto relative"
+      class="h-fit w-full bg-primary p-[1rem] pt-0 px-[1rem] md:px-[0.75rem] md:pb-[0.75rem] md:h-auto relative"
     >
       <FooterHome />
     </div>

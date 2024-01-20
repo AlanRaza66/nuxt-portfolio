@@ -6,7 +6,7 @@ const validateRequiredCondition = (
   validationResult: ValidationResult<string>
 ) => {
   if (!name) {
-    validationResult.message = "Le nom est requis.";
+    validationResult.message = "The name is required.";
     validationResult.isValid = false;
   }
 };
@@ -16,7 +16,7 @@ const validateFormatCondition = (
   validationResult: ValidationResult<string>
 ) => {
   if (typeof name !== "string") {
-    validationResult.message = "Le nom doit être une chaîne.";
+    validationResult.message = "The name must be a string.";
     validationResult.isValid = false;
   }
 };
@@ -30,7 +30,7 @@ const validateLengthCondition = (
   const maxNameLength: number = contactConfig.MAX_NAME_LENGTH;
 
   if (trimmed.length > maxNameLength) {
-    validationResult.message = `Le nom ne doit pas dépasser les ${maxNameLength} caractères.`;
+    validationResult.message = `The name must not exceed ${maxNameLength} characters.`;
     validationResult.isValid = false;
   } else {
     validationResult.result = trimmed;

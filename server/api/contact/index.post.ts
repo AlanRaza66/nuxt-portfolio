@@ -1,19 +1,20 @@
 import Mail from "nodemailer/lib/mailer";
 import { sendEmail } from "~/server/utils/emails/sendEmail";
 import { createBadRequestError } from "~/server/utils/errors";
-import { fileObjectToBuffer } from "~/server/utils/files/fileObjectToBuffer";
 import { getRequestBody } from "~/server/utils/requests/getRequestBody";
 import { validateEmail } from "~/utils/strings/validateEmail";
 import { validateFirstName } from "~/utils/strings/validateFirstNameContact";
 import { validateMessage } from "~/utils/strings/validateMessage";
 import { validateName } from "~/utils/strings/validateNameContact";
 import { validateObject } from "~/utils/strings/validateObjetContact";
-import { validatePhoneNumber } from "~/utils/strings/validatePhoneNumber";
-import type { ErrorMessage, RequestBody, ValidationResult } from "~/utils/types";
+import type {
+  ErrorMessage,
+  RequestBody,
+  ValidationResult,
+} from "~/utils/types";
 
 export default defineEventHandler(async (e) => {
   const { email } = useRuntimeConfig();
-
   const bodyKeys = [
     "name",
     "firstName",
@@ -68,19 +69,6 @@ export default defineEventHandler(async (e) => {
     };
   }
 
-  // phone number is OPTIONAL
-  let phoneNumberValidationResult: ValidationResult<string> | null = null;
-  if (typeof requestBody.phoneNumber === "string") {
-    phoneNumberValidationResult = validatePhoneNumber(requestBody.phoneNumber);
-
-    if (!phoneNumberValidationResult.isValid) {
-      isAllValid = false;
-      errorMessages.email = {
-        message: phoneNumberValidationResult.message,
-      };
-    }
-  }
-
   const subjectValidationResult: ValidationResult<string> = validateObject(
     requestBody.subject
   );
@@ -111,35 +99,35 @@ export default defineEventHandler(async (e) => {
     });
   }
 
-let attachments: Mail.Attachment[] | undefined;
+  let attachments: Mail.Attachment[] | undefined;
 
-//   if (requestBody.attachments instanceof File) {
-//     attachments = [];
-//     const filename: string = requestBody.attachments.name;
-//     const buffer = await fileObjectToBuffer(requestBody.attachments);
+  //   if (requestBody.attachments instanceof File) {
+  //     attachments = [];
+  //     const filename: string = requestBody.attachments.name;
+  //     const buffer = await fileObjectToBuffer(requestBody.attachments);
 
-//     attachments.push({
-//       filename,
-//       content: buffer,
-//     });
-//   } else if (
-//     Array.isArray(requestBody.attachments) &&
-//     requestBody.attachments.every((value) => value instanceof File)
-//   ) {
-//     attachments = await Promise.all(
-//       requestBody.attachments.map(
-//         async (
-//           file: File
-//         ): Promise<{
-//           filename: string;
-//           content: Buffer;
-//         }> => ({
-//           filename: file.name,
-//           content: await fileObjectToBuffer(file),
-//         })
-//       )
-//     );
-//   }
+  //     attachments.push({
+  //       filename,
+  //       content: buffer,
+  //     });
+  //   } else if (
+  //     Array.isArray(requestBody.attachments) &&
+  //     requestBody.attachments.every((value) => value instanceof File)
+  //   ) {
+  //     attachments = await Promise.all(
+  //       requestBody.attachments.map(
+  //         async (
+  //           file: File
+  //         ): Promise<{
+  //           filename: string;
+  //           content: Buffer;
+  //         }> => ({
+  //           filename: file.name,
+  //           content: await fileObjectToBuffer(file),
+  //         })
+  //       )
+  //     );
+  //   }
 
   const now = Date.now();
 
@@ -155,7 +143,16 @@ let attachments: Mail.Attachment[] | undefined;
       from: email,
       to: emailValidationResult.result,
       subject: subjectValidationResult.result,
-      body: "<h2>Hello World!</h2>",
+      body: 
+      `<p>Dear Sir/Madame ${firstNameValidationResult.result} ${nameValidationResult.result}</p>
+      <p>I am pleased to confirm the successful delivery of your recent message. 
+      If you have any additional queries or require further assistance, please do not hesitate to contact me.
+      </p><p>Sincerely,</p>
+      <p><strong>RAKOTOBE Alan Razafinimanana</strong><br/>
+      Phone number: <a href='https://wa.me/261341027330' target='_blank'>+261 34 10 273 30</a></a><br/>
+      Email address: <a href='mailto:alanraza66@gmail.com' target='_blank'>alanraza66@gmail.com</a><br/>
+      Facebook: <a href='https://www.facebook.com/alan.raza.587' target='_blank'>Alan Raza</a><br/>
+      Instagram: <a href='https://www.instagram.com/alan._.raza/' target='_blank'>alna._.raza</a><br/>`,
     })
   );
 
