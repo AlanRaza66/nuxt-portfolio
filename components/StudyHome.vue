@@ -21,7 +21,6 @@ onMounted(() => {
             trigger: component,
             start: "top bottom",
             end: "top 20%",
-            scrub: true,
           },
         }
       );
