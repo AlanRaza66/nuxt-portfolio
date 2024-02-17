@@ -56,7 +56,7 @@
       />
       <NuxtLink
         class="absolute top-0 left-0 block w-full h-full duration-500 translate-y-[100%] md:translate-y-[0] overlay"
-        to="/"
+        to="/projects"
       >
         <div
           class="flex items-start justify-end flex-col w-full h-full p-8 bg-gradient-to-b from-transparent to-[rgba(0,0,0,0.75)] md:p-3"
@@ -74,7 +74,7 @@
         class="absolute top-0 left-0 object-cover w-full h-full"
       /><NuxtLink
         class="absolute top-0 left-0 block w-full h-full duration-500 translate-y-[100%] md:translate-y-[0] overlay"
-        to="/"
+        to="/photos"
       >
         <div
           class="flex items-start justify-end flex-col w-full h-full p-8 bg-gradient-to-b from-transparent to-[rgba(0,0,0,0.75)] md:p-3"

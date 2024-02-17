@@ -12,5 +12,10 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     instagramToken: "",
+    email: "",
+    smtpHost: "",
+    smtpPort: "",
+    smtpUser: "",
+    smtpPassword: "",
   },
 });
