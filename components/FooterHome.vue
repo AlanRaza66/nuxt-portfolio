@@ -6,6 +6,12 @@ import { validateFirstName } from "~/utils/strings/validateFirstNameContact";
 import { validateName } from "~/utils/strings/validateNameContact";
 import { validateObject } from "~/utils/strings/validateObjetContact";
 
+import facebook from "../assets/images/facebook.png";
+import github from "../assets/images/github.png";
+import instagram from "../assets/images/instagram.png";
+import linkedin from "../assets/images/linkedin.png";
+import whatsapp from "../assets/images/whatsapp.png";
+
 const toast = useToast();
 
 const familyname: Ref<string> = ref("");
@@ -108,13 +114,46 @@ const sendToast = () => {
     duration: 5000,
   });
 };
+
+const socialMedia = [
+  {
+    name: "facebook",
+    logo: facebook,
+    link: "https://www.facebook.com/alan.raza.587",
+    contact: "Alan Raza",
+  },
+  {
+    name: "github",
+    logo: github,
+    link: "https://github.com/AlanRaza66",
+    contact: "AlanRaza66",
+  },
+  {
+    name: "linked",
+    logo: linkedin,
+    link: "https://www.linkedin.com/in/alan-razafinimanana-9340861a1/",
+    contact: "Alan Razafinimanana",
+  },
+  {
+    name: "instagram",
+    logo: instagram,
+    link: "https://www.instagram.com/alan._.raza/",
+    contact: "alan._.raza",
+  },
+  {
+    name: "whatsapp",
+    logo: whatsapp,
+    link: "https://wa.me/261341027330",
+    contact: "+261 34 10 273 30",
+  },
+];
 </script>
 <template>
   <div
-    class="grid w-full h-full grid-cols-3 grid-rows-4 gap-4 text-light md:grid-rows-4 md:gap-3"
+    class="grid w-full h-full grid-cols-3 grid-rows-4 gap-4 text-light md:grid-rows-4 md:flex md:flex-col md:gap-3"
   >
     <div
-      class="relative flex items-center pt-[1rem] justify-center col-span-2 row-span-4 overflow-hidden rounded cursor-pointer overlay-activator bg-third md:col-span-5 md:row-span-2 md:aspect-video"
+      class="relative flex items-center pt-[1rem] justify-center col-span-2 row-span-4 overflow-hidden rounded cursor-pointer overlay-activator bg-third md:col-span-5 md:row-span-2"
     >
       <form
         class="flex flex-wrap w-full h-fit"
@@ -129,7 +168,7 @@ const sendToast = () => {
         </h6>
         <InputComponent
           class="w-1/2 md:w-full"
-          label="Nom"
+          label="Name"
           :model-value="familyname"
           :validator="validateName"
           :error-message="errors.name"
@@ -137,7 +176,7 @@ const sendToast = () => {
           required
         /><InputComponent
           class="w-[calc(50%+12px)] md:w-full ml-[-12px] md:ml-0"
-          label="Prénom"
+          label="Firstname"
           :model-value="firstname"
           :validator="validateFirstName"
           :error-message="errors.firstName"
@@ -183,7 +222,18 @@ const sendToast = () => {
       </form>
     </div>
     <div
-      class="relative col-span-1 row-span-4 overflow-hidden rounded cursor-pointer overlay-activator bg-third md:col-span-5 md:row-span-2 md:aspect-video"
-    ></div>
+      class="relative flex flex-col items-center justify-center col-span-1 row-span-4 px-6 overflow-hidden rounded cursor-pointer overlay-activator bg-third md:col-span-5 md:row-span-2 md:aspect-auto py-[24px]"
+    >
+      <NuxtLink
+        class="flex items-center w-full py-[6px]"
+        v-for="media in socialMedia"
+        :key="media.name"
+        :href="media.link"
+        target="_blank"
+      >
+        <img :src="media.logo" :alt="media.name" class="aspetc-square object-contain w-[64px] md:w-[50px] mr-3"/>
+        <figcaption class="text-white">{{ media.contact }}</figcaption>
+      </NuxtLink>
+    </div>
   </div>
 </template>

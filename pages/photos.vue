@@ -1,4 +1,9 @@
 <script setup>
+import gsap from "gsap";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 const imageLoadedCount = ref(0);
 const imagesCount = ref(Infinity);
 const isImagesLoaded = computed(

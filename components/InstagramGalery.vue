@@ -27,13 +27,11 @@ onMounted(() => {
       gsap.fromTo(
         component,
         {
-          x: y % 2 == 0 ? -100 : 100,
           opacity: 0,
         },
         {
-          x: 0,
           opacity: 1,
-          duration: 0.5,
+          duration: 1.5,
           scrollTrigger: {
             trigger: component,
             start: "top bottom",
