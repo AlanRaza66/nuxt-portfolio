@@ -24,10 +24,10 @@ const links = [
     label: "Projects",
     link: "/projects",
   },
-  {
-    label: "Photos",
-    link: "/photos",
-  },
+  // {
+  //   label: "Photos",
+  //   link: "/photos",
+  // },
 ];
 </script>
 <template>

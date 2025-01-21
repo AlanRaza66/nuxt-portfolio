@@ -6,23 +6,25 @@
       class="relative col-span-3 row-span-3 overflow-hidden rounded cursor-pointer overlay-activator bg-third md:col-span-5 md:row-span-2 md:row-start-3 md:aspect-video"
     >
       <img
-        src="../assets/images/magazine.jpg"
-        alt="Reading"
-        class="absolute top-0 left-0 object-cover w-full h-full"
+        src="../assets/images/oceantrade.jpg"
+        alt="Oceantrade"
+        class="absolute top-0 left-0 object-cover object-top w-full h-full"
       />
       <div
-        class="absolute top-0 left-0 block w-full h-full duration-500 translate-y-[100%] md:translate-y-[0] overlay"
+        class="absolute top-0 left-0 block w-full h-full duration-500 translate-y-[100%] md:translate-y-[0] overlay md:opacity-0"
       >
         <NuxtLink
-          to="https://www.magazine.mg"
+          to="https://www.oceantrade.mg"
           target="_blank"
           class="w-full h-full"
         >
           <div
             class="flex items-start justify-end flex-col w-full h-full p-8 bg-gradient-to-b from-transparent to-[rgba(0,0,0,0.75)] md:p-3 md:row-start-1"
           >
-            <h6 class="text-lg font-bold">Magazine.mg</h6>
-            <p class="text-base font-light">Read, Download our magazines</p>
+            <h6 class="text-lg font-bold">Oceantrade</h6>
+            <p class="text-base font-light">
+              The website that allows you to request a quote for your vehicles.
+            </p>
           </div></NuxtLink
         >
       </div>
@@ -33,20 +35,22 @@
       <div
         class="flex flex-col items-start justify-center w-full h-full md:justify-start"
       >
-        <h2 class="mb-2 text-4xl font-bold md:text-2xl md:text-center md:w-full">
-          Magazine.mg
+        <h2
+          class="mb-2 text-4xl font-bold md:text-2xl md:text-center md:w-full"
+        >
+          Oceantrade
         </h2>
         <p class="text-xl font-thin text-justify md:text-base">
-          Magazine.mg is a platform designed for reading and downloading online
-          magazine editions like "Fémina Life", "Info Tourisme" and "Ride
-          Madagascar". Developed primarily with the assistance of some friends
-          using React, the site offers a user-friendly interface for accessing a
-          wide range of magazine content.
+          oceantrade.mg is a website that allows users to explore the catalog of
+          brands and vehicles available at OceanTrade and request quotes easily.
+          The platform also features an administration section for managing the
+          site's data efficiently, ensuring a smooth experience for both users
+          and administrators.
         </p>
       </div>
     </div>
     <div
-      class="relative col-span-1 row-span-2 overflow-hidden rounded bg-third md:col-span-5 md:row-span-2 overlay-activator"
+      class="relative col-span-2 row-span-2 overflow-hidden rounded bg-third md:col-span-5 md:row-span-2 overlay-activator"
     >
       <div class="flex flex-wrap items-start justify-around w-full h-full">
         <div class="flex items-center justify-center w-full pt-6">
@@ -58,18 +62,36 @@
           class="flex flex-col items-center justify-center rounded-sm aspect-square m-[12px] mt-0 h-[100px] md:h-[80px]"
         >
           <img
-            src="../assets/images/techs/react.png"
-            alt="React JS"
+            src="../assets/images/techs/mysql.png"
+            alt="MySQL"
             class="object-contain h-[80px] md:h-[52px] aspect-square"
           />
-          <figcaption class="text-lg font-thin text-center">
-            React JS
-          </figcaption>
+          <figcaption class="text-lg font-thin text-center">MySQL</figcaption>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center rounded-sm aspect-square m-[12px] mt-0 h-[100px] md:h-[80px]"
+        >
+          <img
+            src="../assets/images/techs/nuxt.png"
+            alt="Nuxt JS"
+            class="object-contain h-[80px] md:h-[52px] aspect-square"
+          />
+          <figcaption class="text-lg font-thin text-center">Nuxt JS</figcaption>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center rounded-sm aspect-square m-[12px] mt-0 h-[100px] md:h-[80px]"
+        >
+          <img
+            src="../assets/images/techs/prisma.png"
+            alt="MySQL"
+            class="object-contain h-[80px] md:h-[52px] aspect-square"
+          />
+          <figcaption class="text-lg font-thin text-center">Prisma</figcaption>
         </div>
       </div>
     </div>
     <div
-      class="relative col-span-2 row-span-2 overflow-hidden rounded bg-third md:col-span-5 md:row-span-2 overlay-activator"
+      class="relative col-span-1 row-span-2 overflow-hidden rounded bg-third md:col-span-5 md:row-span-2 overlay-activator"
     >
       <div class="flex flex-wrap items-start justify-start w-full h-full">
         <div class="flex items-center justify-center w-full pt-6">
@@ -81,11 +103,12 @@
           class="flex flex-col items-center justify-start w-full px-8 pb-6 md:px-3"
         >
           <p class="text-xl font-thin text-justify md:!text-base">
-            Frontend Developer
+            Project Manager
           </p>
           <p class="text-xl font-thin text-justify md:!text-base">
-            Web Integrator
+            Developer
           </p>
+          <p class="text-xl font-thin text-justify md:!text-base">Designer and photographer</p>
         </div>
       </div>
     </div>
@@ -94,15 +117,18 @@
     >
       <div class="flex flex-wrap items-start justify-start w-full h-full">
         <div class="flex items-center justify-center w-full pt-6">
-          <h6 class="text-4xl font-bold md:text-2xl md:text-center md:w-full">About</h6>
+          <h6 class="text-4xl font-bold md:text-2xl md:text-center md:w-full">
+            About
+          </h6>
         </div>
         <div
           class="flex flex-col items-center justify-start w-full px-8 pb-6 md:px-3"
         >
           <p class="text-xl font-thin text-justify md:!text-base">
-            This project was completed in 2021. We are currently planning to
-            enhance the site to optimize its performance and make it more
-            user-friendly.
+            The site is an upgrade from a previous version. Improvements to the
+            SEO have been implemented, and the integration of Google Analytics
+            was carried out simultaneously. It is also lighter and more
+            streamlined than the previous version
           </p>
         </div>
       </div>

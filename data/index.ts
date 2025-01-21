@@ -20,7 +20,9 @@ import xd from "../assets/images/techs/xd.png";
 import postman from "../assets/images/techs/postman.png";
 import npm from "../assets/images/techs/npm.png";
 import tailwind from "../assets/images/techs/tailwind.png";
-import prisma from "../assets/images/techs/prisma.png"
+import prisma from "../assets/images/techs/prisma.png";
+import docker from "../assets/images/techs/docker.png";
+
 const languages = [
   {
     name: "node",
@@ -72,6 +74,10 @@ const librairies = [
 ];
 
 const others = [
+  {
+    name: "docker",
+    logo: docker
+  },
   {
     name: "git",
     logo: git,

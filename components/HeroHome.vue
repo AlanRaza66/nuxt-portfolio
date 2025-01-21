@@ -26,6 +26,7 @@
           photography, this space showcases my work at the intersection of
           innovation and creativity.
         </p>
+        <a href="/cv.pdf" download="" class="px-4 py-2 mt-2 text-xl md:text-base bg-white text-third rounded-md duration-[500ms] hover:bg-slate-200">Download my CV</a>
       </div>
     </div>
     <div
@@ -43,7 +44,7 @@
           class="flex items-start justify-end flex-col w-full h-full p-8 bg-gradient-to-b from-transparent to-[rgba(0,0,0,0.75)] md:p-3"
         >
           <h6 class="text-lg font-bold">Get to know me!</h6>
-          <p class="text-base font-light md:hidden">Who i am?</p>
+          <p class="text-base font-light md:hidden">Who am i?</p>
         </div></NuxtLink
       >
     </div>
@@ -74,7 +75,8 @@
         class="absolute top-0 left-0 object-cover w-full h-full"
       /><NuxtLink
         class="absolute top-0 left-0 block w-full h-full duration-500 translate-y-[100%] md:translate-y-[0] overlay"
-        to="/photos"
+        href="https://www.instagram.com/alan._.raza/"
+        target="_blank"
       >
         <div
           class="flex items-start justify-end flex-col w-full h-full p-8 bg-gradient-to-b from-transparent to-[rgba(0,0,0,0.75)] md:p-3"

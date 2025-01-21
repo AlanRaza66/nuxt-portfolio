@@ -1,37 +1,5 @@
 <script setup lang="ts">
 import { languages, librairies, others, designs } from "../data/index";
-import gsap from "gsap";
-
-const main = ref();
-let ctx: gsap.Context;
-onMounted(() => {
-  ctx = gsap.context((self) => {
-    const components = self.selector ? self.selector(".component") : null;
-    components.forEach((component: any, y: any) => {
-      gsap.fromTo(
-        component,
-        {
-          x: y % 2 == 0 ? -100 : 100,
-          opacity: 0,
-        },
-        {
-          x: 0,
-          opacity: 1,
-          duration: 0.5,
-          scrollTrigger: {
-            trigger: component,
-            start: "top bottom",
-            end: "top 20%",
-          },
-        }
-      );
-    });
-  }, main.value); // <- Scope!
-});
-
-onUnmounted(() => {
-  ctx.revert(); // <- Easy Cleanup!
-});
 </script>
 <template>
   <div
